@@ -1,0 +1,12 @@
+
+@smokeTest
+Scenario: Two                                             # src/test/resources/features/GoogleSearchDomain.feature:4
+
+@smokeTest
+Scenario: One                                 # src/test/resources/features/GoogleSearch.feature:4
+  Given We are on Google Search page                      # stepdefs.CucumberTest.We_are_on_Google_Search_page()
+  Given We are on Google Search page          # stepdefs.CucumberTest.We_are_on_Google_Search_page()
+  When make Search in google for "automation" # stepdefs.CucumberTest.make_Search_in_google(java.lang.String)
+  When make Search in google for "automation"             # stepdefs.CucumberTest.make_Search_in_google(java.lang.String)
+  Then Verifying Title on 5 pages "testautomationday.com" # stepdefs.CucumberTest.verifyingDomainOnPages(java.lang.Integer,java.lang.String)
+  Then Verifying Title "automation"           # stepdefs.CucumberTest.verifyingTitle(java.lang.String)
