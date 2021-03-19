@@ -3,7 +3,7 @@
 <suite name="Cucumber" parallel="methods" thread-count="2">
     <test name="GoogleSearch">
         <classes>
-            <class name="general.RunCucumberTest"/>
+            <class name="stepdefs.RunCucumberTest"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
