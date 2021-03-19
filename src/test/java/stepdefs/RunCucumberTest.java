@@ -8,12 +8,12 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
         glue= {"stepdefs"},//the path of the step definition files
         plugin= {"pretty:target/cucumber-pretty.txt",
                 "html:target/cucumber-html-report",
-//                "json:target/cucumber.json",
-//                "rerun:target/rerun.txt"
-        }, //to generate different types of reporting
-        monochrome = true, //display the console output in a proper readable format
-//        strict = true, //it will check if any step is not defined in step definition file
-        dryRun = true //to check the mapping is proper between feature file and step definition file )
+                "json:target/cucumber.json",
+                "rerun:target/rerun.txt"
+        } //to generate different types of reporting
+//        monochrome = true, //display the console output in a proper readable format
+////        strict = true, //it will check if any step is not defined in step definition file
+//        dryRun = true //to check the mapping is proper between feature file and step definition file )
 )
 public class RunCucumberTest extends AbstractTestNGCucumberTests{
 

@@ -1,17 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="0" passed="0">
+<testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="2088" started-at="2021-03-18T21:52:26Z" finished-at="2021-03-18T21:52:28Z">
+  <suite name="Surefire suite" duration-ms="44388" started-at="2021-03-19T15:53:40Z" finished-at="2021-03-19T15:54:25Z">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepdefs.RunCucumberTest@32d992b2]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test name="Surefire test" duration-ms="2088" started-at="2021-03-18T21:52:26Z" finished-at="2021-03-18T21:52:28Z">
-      <class name="stepdefs.Tests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:stepdefs.Tests@3c756e4d]" name="setUp" is-config="true" duration-ms="2085" started-at="2021-03-18T23:52:26Z" finished-at="2021-03-18T23:52:28Z">
+    <test name="Surefire test" duration-ms="44388" started-at="2021-03-19T15:53:40Z" finished-at="2021-03-19T15:54:25Z">
+      <class name="stepdefs.RunCucumberTest">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:stepdefs.RunCucumberTest@32d992b2]" name="setUpClass" is-config="true" duration-ms="1023" started-at="2021-03-19T17:53:40Z" finished-at="2021-03-19T17:53:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-      </class> <!-- stepdefs.Tests -->
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepdefs.RunCucumberTest@32d992b2]" name="runScenario" duration-ms="29580" started-at="2021-03-19T17:53:41Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-03-19T17:54:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["One"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Test Google Search Functionality]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepdefs.RunCucumberTest@32d992b2]" name="runScenario" duration-ms="43093" started-at="2021-03-19T17:53:41Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-03-19T17:54:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Two"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Test Google Search Functionality]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[The title 'testautomationday.com' doesn't contain required word on 5 pages] 
+Expecting value to be true but was false]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [The title 'testautomationday.com' doesn't contain required word on 5 pages] 
+Expecting value to be true but was false
+	at stepdefs.CucumberTest.verifyingDomainOnPages(CucumberTest.java:65)
+	at ✽.Verifying Title on 5 pages "testautomationday.com"(file:///E:/Inte/EpamTestTask/src/test/resources/features/GoogleSearchDomain.feature:9)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:stepdefs.RunCucumberTest@32d992b2]" name="tearDownClass" is-config="true" duration-ms="228" started-at="2021-03-19T17:54:24Z" finished-at="2021-03-19T17:54:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- stepdefs.RunCucumberTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>

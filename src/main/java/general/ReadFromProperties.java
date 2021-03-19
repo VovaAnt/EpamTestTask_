@@ -17,14 +17,10 @@ public class ReadFromProperties {
 		String value = null;
 		
 		try {
-			
-			
 			//load a properties file
 			prop.load(new FileInputStream(filePath));
-			
 			//get the property value and print it out
 			value = prop.getProperty(param);
-			
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}

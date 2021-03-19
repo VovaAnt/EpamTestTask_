@@ -1,6 +1,7 @@
 package stepdefs;
 
 import declar.Google;
+import general.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -12,10 +13,8 @@ import org.openqa.selenium.WebDriver;
 @Slf4j
 public class CucumberTest {
 
-    WebDriver driver = new general.Driver().getDriver();
-
+    WebDriver driver = new Driver().getDriver();
     Google myGogl = new Google(driver);
-
 
     @Given("^We are on Google Search page$")
     public void We_are_on_Google_Search_page() {
@@ -25,11 +24,8 @@ public class CucumberTest {
 
     @When("^make Search in google for \"([^\"]*)\"$")
     public void make_Search_in_google(String searchWord) {
-
-
         log.info("Type  {}  into search field ", searchWord);
         myGogl.searchField.sendKeys(searchWord);
-
         log.info("Press Enter for start searching");
         myGogl.searchField.sendKeys(Keys.ENTER);
     }

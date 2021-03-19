@@ -20,12 +20,10 @@ public class Driver {
                 case "FireFox":
                     driver = firefoxDriver();
                     break;
-
                 //choose Chrome to run tests
                 case "Chrome":
                     driver = chromeDriver();
                     break;
-
                 default:
                     try {
                         throw new Exception("Incorrect text for driverType value. FireFox, Chrome, IE9, Safari are allowed");
@@ -37,7 +35,6 @@ public class Driver {
             }
         driver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
         return driver;
-
     }
 
     public WebDriver getDriver() {
@@ -45,7 +42,6 @@ public class Driver {
             driver = init();
         }
         return driver;
-
     }
 
 
