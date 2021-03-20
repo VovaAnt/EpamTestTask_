@@ -13,7 +13,6 @@ public class Variables {
     public static String getSearchingWord(){
         return ReadFromProperties.readProperty(testPropertyFile, "searchingWord");
     }
-
     /**
      * generalFiles.General.General.Driver type: for FireFox, Chrome,
      */

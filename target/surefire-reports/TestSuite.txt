@@ -1,9 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 45.093 s <<< FAILURE! - in TestSuite
-runScenario(stepdefs.RunCucumberTest)  Time elapsed: 43.1 s  <<< FAILURE!
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 63.885 s <<< FAILURE! - in TestSuite
+runScenario(stepdefs.RunCucumberTest)  Time elapsed: 38.18 s  <<< FAILURE!
 java.lang.AssertionError: 
 [The title 'testautomationday.com' doesn't contain required word on 5 pages] 
 Expecting value to be true but was false
+
+SearchInFirstFivePages(stepdefs.Tests)  Time elapsed: 14.605 s  <<< FAILURE!
+java.lang.AssertionError: 
+[There no such domain which we looking for (testautomationday.com)] 
+Expecting value to be true but was false
+	at stepdefs.Tests.SearchInFirstFivePages(Tests.java:46)
 

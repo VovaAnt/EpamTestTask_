@@ -15,7 +15,6 @@ public class ReadFromProperties {
 	public static String readProperty (String filePath, String param){
 		Properties prop = new Properties();
 		String value = null;
-		
 		try {
 			//load a properties file
 			prop.load(new FileInputStream(filePath));
@@ -24,7 +23,6 @@ public class ReadFromProperties {
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}
-		
 		//return matched parameter
 		return value;
 	}

@@ -1,15 +1,15 @@
 
-Scenario: One                                 [90m# src/test/resources/features/GoogleSearch.feature:4[0m
+Scenario: One                                 [90m# src/test/resources/features/GoogleSearch.feature:3[0m
 
-Scenario: Two                                             [90m# src/test/resources/features/GoogleSearchDomain.feature:6[0m
-  [32mGiven [0m[32mWe are on Google Search page[0m                      [90m# stepdefs.CucumberTest.We_are_on_Google_Search_page()[0m
-  [32mGiven [0m[32mWe are on Google Search page[0m          [90m# stepdefs.CucumberTest.We_are_on_Google_Search_page()[0m
-  [32mWhen [0m[32mmake Search in google for "[0m[32m[1mautomation[0m[32m"[0m [90m# stepdefs.CucumberTest.make_Search_in_google(java.lang.String)[0m
-  [32mThen [0m[32mVerifying Title "[0m[32m[1mautomation[0m[32m"[0m           [90m# stepdefs.CucumberTest.verifyingTitle(java.lang.String)[0m
-  [32mWhen [0m[32mmake Search in google for "[0m[32m[1mautomation[0m[32m"[0m             [90m# stepdefs.CucumberTest.make_Search_in_google(java.lang.String)[0m
-  [31mThen [0m[31mVerifying Title on [0m[31m[1m5[0m[31m pages "[0m[31m[1mtestautomationday.com[0m[31m"[0m [90m# stepdefs.CucumberTest.verifyingDomainOnPages(java.lang.Integer,java.lang.String)[0m
+Scenario: Two                                             [90m# src/test/resources/features/GoogleSearchDomain.feature:3[0m
+  [32mGiven [0m[32mWe are on Google Search page[0m          [90m# stepdefs.CucumberTest.weAreOnGoogleSearchPage()[0m
+  [32mGiven [0m[32mWe are on Google Search page[0m                      [90m# stepdefs.CucumberTest.weAreOnGoogleSearchPage()[0m
+  [32mWhen [0m[32mMake Search in google for [0m[32m[1m"automation"[0m [90m# stepdefs.CucumberTest.makeSearchInGoogle(java.lang.String)[0m
+  [32mThen [0m[32mVerifying Title [0m[32m[1m"automation"[0m           [90m# stepdefs.CucumberTest.verifyingTitle(java.lang.String)[0m
+  [32mWhen [0m[32mMake Search in google for [0m[32m[1m"automation"[0m             [90m# stepdefs.CucumberTest.makeSearchInGoogle(java.lang.String)[0m
+  [31mThen [0m[31mVerifying Title on [0m[31m[1m5[0m[31m pages [0m[31m[1m"testautomationday.com"[0m [90m# stepdefs.CucumberTest.verifyingDomainOnPages(java.lang.Integer,java.lang.String)[0m
       [31mjava.lang.AssertionError: [The title 'testautomationday.com' doesn't contain required word on 5 pages] 
 Expecting value to be true but was false
-	at stepdefs.CucumberTest.verifyingDomainOnPages(CucumberTest.java:65)
-	at ✽.Verifying Title on 5 pages "testautomationday.com"(file:///E:/Inte/EpamTestTask/src/test/resources/features/GoogleSearchDomain.feature:9)
+	at stepdefs.CucumberTest.verifyingDomainOnPages(CucumberTest.java:46)
+	at ✽.Verifying Title on 5 pages "testautomationday.com"(file:///E:/Inte/EpamTestTask/src/test/resources/features/GoogleSearchDomain.feature:6)
 [0m

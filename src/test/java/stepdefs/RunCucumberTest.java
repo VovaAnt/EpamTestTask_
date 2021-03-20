@@ -16,7 +16,6 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 //        dryRun = true //to check the mapping is proper between feature file and step definition file )
 )
 public class RunCucumberTest extends AbstractTestNGCucumberTests{
-
     @Override
     @DataProvider(parallel = true)
     public Object[][] scenarios() {

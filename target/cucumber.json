@@ -3,8 +3,8 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-03-19T15:53:42.040Z",
-        "line": 4,
+        "start_timestamp": "2021-03-20T19:42:13.995Z",
+        "line": 3,
         "name": "One",
         "description": "",
         "id": "test-google-search-functionality;one",
@@ -13,46 +13,46 @@
         "steps": [
           {
             "result": {
-              "duration": 26576000000,
+              "duration": 24034000000,
               "status": "passed"
             },
-            "line": 5,
+            "line": 4,
             "name": "We are on Google Search page",
             "match": {
-              "location": "stepdefs.CucumberTest.We_are_on_Google_Search_page()"
+              "location": "stepdefs.CucumberTest.weAreOnGoogleSearchPage()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2630000000,
+              "duration": 1599000000,
               "status": "passed"
             },
-            "line": 6,
-            "name": "make Search in google for \"automation\"",
+            "line": 5,
+            "name": "Make Search in google for \"automation\"",
             "match": {
               "arguments": [
                 {
-                  "val": "automation",
-                  "offset": 27
+                  "val": "\"automation\"",
+                  "offset": 26
                 }
               ],
-              "location": "stepdefs.CucumberTest.make_Search_in_google(java.lang.String)"
+              "location": "stepdefs.CucumberTest.makeSearchInGoogle(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 145000000,
+              "duration": 71000000,
               "status": "passed"
             },
-            "line": 7,
+            "line": 6,
             "name": "Verifying Title \"automation\"",
             "match": {
               "arguments": [
                 {
-                  "val": "automation",
-                  "offset": 17
+                  "val": "\"automation\"",
+                  "offset": 16
                 }
               ],
               "location": "stepdefs.CucumberTest.verifyingTitle(java.lang.String)"
@@ -73,8 +73,8 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-03-19T15:53:42.045Z",
-        "line": 6,
+        "start_timestamp": "2021-03-20T19:42:13.997Z",
+        "line": 3,
         "name": "Two",
         "description": "",
         "id": "test-google-search-functionality;two",
@@ -83,41 +83,41 @@
         "steps": [
           {
             "result": {
-              "duration": 26519000000,
+              "duration": 24063000000,
               "status": "passed"
             },
-            "line": 7,
+            "line": 4,
             "name": "We are on Google Search page",
             "match": {
-              "location": "stepdefs.CucumberTest.We_are_on_Google_Search_page()"
+              "location": "stepdefs.CucumberTest.weAreOnGoogleSearchPage()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2848000000,
+              "duration": 2003000000,
               "status": "passed"
             },
-            "line": 8,
-            "name": "make Search in google for \"automation\"",
+            "line": 5,
+            "name": "Make Search in google for \"automation\"",
             "match": {
               "arguments": [
                 {
-                  "val": "automation",
-                  "offset": 27
+                  "val": "\"automation\"",
+                  "offset": 26
                 }
               ],
-              "location": "stepdefs.CucumberTest.make_Search_in_google(java.lang.String)"
+              "location": "stepdefs.CucumberTest.makeSearchInGoogle(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: [The title \u0027testautomationday.com\u0027 doesn\u0027t contain required word on 5 pages] \r\nExpecting value to be true but was false\r\n\tat stepdefs.CucumberTest.verifyingDomainOnPages(CucumberTest.java:65)\r\n\tat ✽.Verifying Title on 5 pages \"testautomationday.com\"(file:///E:/Inte/EpamTestTask/src/test/resources/features/GoogleSearchDomain.feature:9)\r\n",
-              "duration": 13502000000,
+              "error_message": "java.lang.AssertionError: [The title \u0027testautomationday.com\u0027 doesn\u0027t contain required word on 5 pages] \r\nExpecting value to be true but was false\r\n\tat stepdefs.CucumberTest.verifyingDomainOnPages(CucumberTest.java:46)\r\n\tat ✽.Verifying Title on 5 pages \"testautomationday.com\"(file:///E:/Inte/EpamTestTask/src/test/resources/features/GoogleSearchDomain.feature:6)\r\n",
+              "duration": 13171000000,
               "status": "failed"
             },
-            "line": 9,
+            "line": 6,
             "name": "Verifying Title on 5 pages \"testautomationday.com\"",
             "match": {
               "arguments": [
@@ -126,8 +126,8 @@
                   "offset": 19
                 },
                 {
-                  "val": "testautomationday.com",
-                  "offset": 28
+                  "val": "\"testautomationday.com\"",
+                  "offset": 27
                 }
               ],
               "location": "stepdefs.CucumberTest.verifyingDomainOnPages(java.lang.Integer,java.lang.String)"

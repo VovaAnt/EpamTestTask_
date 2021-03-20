@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 @Getter
 public class Google extends BasePage {
 
-    String URL = "https://www.google.com/webhp?hl=ru&sa=X&ved=0ahUKEwi78ta16qzvAhXFDewKHfOQAzMQPAgI";
+    String URL = "https://www.google.com/";
 
     @FindBy(name = "q")
     public WebElement searchField;
@@ -46,7 +46,9 @@ public class Google extends BasePage {
             try {
                 driver.findElement(By.xpath(String.format(getDomain(), searchingDomain)));
                 return true;
-            } catch (NoSuchElementException e) {}
+            } catch (NoSuchElementException e) {
+//                log.info();
+            }
         }
         return false;
     }

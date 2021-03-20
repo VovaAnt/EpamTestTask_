@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Surefire_suite">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -100,6 +100,11 @@
                       <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
                     </span>
                     <div class="method-list-content failed suite-Surefire_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="stepdefs.Tests" hash-for-method="SearchInFirstFivePages">SearchInFirstFivePages</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="stepdefs.RunCucumberTest" hash-for-method="runScenario(&quot;Two&quot;, &quot;Optional[Test Google Search Functionality]&quot;)">runScenario("Two", "Optional[Test Google Search Functionality]")</a> <!-- method navigator-link -->
@@ -114,6 +119,11 @@
                       <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
                     </span>
                     <div class="method-list-content passed suite-Surefire_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="stepdefs.Tests" hash-for-method="SearchTest">SearchTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="stepdefs.RunCucumberTest" hash-for-method="runScenario(&quot;One&quot;, &quot;Optional[Test Google Search Functionality]&quot;)">runScenario("One", "Optional[Test Google Search Functionality]")</a> <!-- method navigator-link -->
@@ -134,6 +144,26 @@
           <div class="suite-Surefire_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
+              <span class="class-name">stepdefs.Tests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="SearchInFirstFivePages">
+                  </a> <!-- SearchInFirstFivePages -->
+                  <span class="method-name">SearchInFirstFivePages</span>
+                  <div class="stack-trace">java.lang.AssertionError: [There no such domain which we looking for (testautomationday.com)] 
+Expecting value to be true but was false
+	at stepdefs.Tests.SearchInFirstFivePages(Tests.java:46)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
               <span class="class-name">stepdefs.RunCucumberTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -145,8 +175,8 @@
                   <span class="parameters">("Two", "Optional[Test Google Search Functionality]")</span>
                   <div class="stack-trace">java.lang.AssertionError: [The title &apos;testautomationday.com&apos; doesn&apos;t contain required word on 5 pages] 
 Expecting value to be true but was false
-	at stepdefs.CucumberTest.verifyingDomainOnPages(CucumberTest.java:65)
-	at ✽.Verifying Title on 5 pages &quot;testautomationday.com&quot;(file:///E:/Inte/EpamTestTask/src/test/resources/features/GoogleSearchDomain.feature:9)
+	at stepdefs.CucumberTest.verifyingDomainOnPages(CucumberTest.java:46)
+	at ✽.Verifying Title on 5 pages &quot;testautomationday.com&quot;(file:///E:/Inte/EpamTestTask/src/test/resources/features/GoogleSearchDomain.feature:6)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -155,6 +185,21 @@ Expecting value to be true but was false
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Surefire_suite-class-failed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">stepdefs.Tests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="SearchTest">
+                  </a> <!-- SearchTest -->
+                  <span class="method-name">SearchTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
           <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -186,19 +231,9 @@ Expecting value to be true but was false
     &lt;classes&gt;
       &lt;class name=&quot;stepdefs.CucumberTest&quot;/&gt;
       &lt;class name=&quot;stepdefs.RunCucumberTest&quot;/&gt;
+      &lt;class name=&quot;stepdefs.Tests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Surefire test --&gt;
-  &lt;test name=&quot;Surefire test(failed)&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;stepdefs.RunCucumberTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;runScenario&quot; invocation-numbers=&quot;1&quot;/&gt;
-          &lt;include name=&quot;tearDownClass&quot;/&gt;
-          &lt;include name=&quot;setUpClass&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- stepdefs.RunCucumberTest --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Surefire test(failed) --&gt;
 &lt;/suite&gt; &lt;!-- Surefire suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -210,10 +245,7 @@ Expecting value to be true but was false
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Surefire test (2 classes)</span>
-              </li>
-              <li>
-                <span class="test-name">Surefire test(failed) (1 class)</span>
+                <span class="test-name">Surefire test (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -247,15 +279,23 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'stepdefs.RunCucumberTest')
-data.setCell(0, 3, 43093);
+data.setCell(0, 3, 38175);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'stepdefs.RunCucumberTest')
-data.setCell(1, 3, 29580);
+data.setCell(1, 3, 25448);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'SearchInFirstFivePages')
+data.setCell(2, 2, 'stepdefs.Tests')
+data.setCell(2, 3, 14694);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'SearchTest')
+data.setCell(3, 2, 'stepdefs.Tests')
+data.setCell(3, 3, 1448);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
@@ -286,25 +326,49 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">stepdefs.Tests</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">stepdefs.RunCucumberTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">3693 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">runScenario("One", "Optional[Test Google Search Functionality]")</span>
-                <span class="method-start">1039 ms</span>
-              </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Two", "Optional[Test Google Search Functionality]")</span>
-                <span class="method-start">1041 ms</span>
+                <span class="method-start">4302 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("One", "Optional[Test Google Search Functionality]")</span>
+                <span class="method-start">4302 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">44140 ms</span>
+                <span class="method-start">42483 ms</span>
               </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">stepdefs.Tests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">SearchInFirstFivePages</span>
+                <span class="method-start">42586 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SearchTest</span>
+                <span class="method-start">57280 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">shutDown</span>
+                <span class="method-start">58729 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

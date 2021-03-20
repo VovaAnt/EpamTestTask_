@@ -5,10 +5,18 @@
     <classes>
       <class name="stepdefs.CucumberTest"/>
       <class name="stepdefs.RunCucumberTest"/>
+      <class name="stepdefs.Tests"/>
     </classes>
   </test> <!-- Surefire test -->
   <test name="Surefire test(failed)">
     <classes>
+      <class name="stepdefs.Tests">
+        <methods>
+          <include name="SearchInFirstFivePages"/>
+          <include name="setUp"/>
+          <include name="shutDown"/>
+        </methods>
+      </class> <!-- stepdefs.Tests -->
       <class name="stepdefs.RunCucumberTest">
         <methods>
           <include name="runScenario" invocation-numbers="1"/>
