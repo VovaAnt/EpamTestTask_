@@ -7,32 +7,30 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
+import static org.openqa.selenium.remote.BrowserType.FIREFOX;
+import static org.openqa.selenium.remote.BrowserType.GOOGLECHROME;
+
 public class Driver {
 
-    protected  WebDriver driver = null;
+    protected WebDriver driver = null;
 
     Variables vars = new Variables();
-    String browserName = vars.getDriverType();
+    String browserName = vars.getBrowserType();
     private int timeout = 2;
 
-    private WebDriver init(){
-            switch (this.browserName) {
-                //choose FireFox to run tests
-                case "FireFox":
-                    driver = firefoxDriver();
-                    break;
-                //choose Chrome to run tests
-                case "Chrome":
-                    driver = chromeDriver();
-                    break;
-                default:
-                    try {
-                        throw new Exception("Incorrect text for driverType value. FireFox, Chrome, IE9, Safari are allowed");
-                    } catch (Exception e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    }
-            }
+    private WebDriver init() {
+        switch (this.browserName.toLowerCase()) {
+            //choose FireFox to run tests
+            case FIREFOX:
+                driver = firefoxDriver();
+                break;
+            //choose Chrome to run tests
+            case GOOGLECHROME:
+                driver = chromeDriver();
+                break;
+            default:
+                throw new RuntimeException(String.format("Incorrect browserType %s. FireFox, Chrome are allowed", browserName));
+        }
         driver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
         return driver;
     }
@@ -45,18 +43,16 @@ public class Driver {
     }
 
     //Chrome driver initialization
-    public WebDriver chromeDriver() {
+    private WebDriver chromeDriver() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         return driver;
     }
 
     //FireFox driver initialization
-    public WebDriver firefoxDriver() {
+    private WebDriver firefoxDriver() {
         WebDriverManager.firefoxdriver().setup();
         WebDriver driver = new FirefoxDriver();
         return driver;
     }
-
 }
-
