@@ -5,7 +5,7 @@ In this project we use:
 2) Cucumber (6.10.2)
 3) TestNG (6.9.10)
 4) Allure
-5) Test.properties file which includs parameters for project( for searching word, domain and browser type)
+5) Test.properties file which includs parameters for project( for browser type)
 
 
 
