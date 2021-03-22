@@ -2,13 +2,13 @@ package general;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.openqa.selenium.remote.BrowserType.FIREFOX;
-import static org.openqa.selenium.remote.BrowserType.GOOGLECHROME;
+import static org.openqa.selenium.remote.BrowserType.*;
 
 public class Driver {
 
@@ -26,10 +26,11 @@ public class Driver {
                 break;
             //choose Chrome to run tests
             case GOOGLECHROME:
+            case CHROME:
                 driver = chromeDriver();
                 break;
             default:
-                throw new RuntimeException(String.format("Incorrect browserType %s. FireFox, Chrome are allowed", browserName));
+                throw new WebDriverException(String.format("Incorrect browserType %s. FireFox, Chrome are allowed", browserName));
         }
         driver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
         return driver;
