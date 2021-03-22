@@ -3,13 +3,24 @@ package stepdefs;
 
 import declar.GooglePage;
 import general.Driver;
+import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.qameta.allure.Allure;
+import io.qameta.allure.Attachment;
+import io.qameta.allure.Step;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+
+
+import java.io.ByteArrayInputStream;
 
 
 @Slf4j
@@ -17,6 +28,17 @@ public class CucumberTest {
 
     WebDriver driver = new Driver().getDriver();
     GooglePage googlePage = new GooglePage(driver);
+
+    @After(order = 2)
+    public void screenshot(Scenario scenario) {
+        if (scenario.isFailed()) {
+            Allure.addAttachment("Sreenshot  ", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
+        }
+    }
+    @After(order = 1)
+    public void shutDown(Scenario scenario) {
+        driver.quit();
+    }
 
     @Given("We are on Google Search page")
     public void weAreOnGoogleSearchPage() {
